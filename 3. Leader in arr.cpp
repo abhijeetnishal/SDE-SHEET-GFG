@@ -34,23 +34,24 @@ vector<int> leaders(int a[], int n){
 //TC : O(N) ASC : O(N) (stack)
 vector<int> leaders(int a[], int n){
     vector<int> ans; 
-    
     stack<int> st;
+    
     st.push(a[n-1]);
     ans.push_back(a[n-1]);
-    
+
     for(int i=n-2;i>=0;i--){
-        if(!st.empty() && st.top()<=a[i]){
-            while(!st.empty() && st.top()<=a[i]){
+        while(!st.empty() && st.top()<=a[i]){
                 st.pop();
             }
-            if(st.empty())
-                ans.push_back(a[i]);
-        }
+
+        if(st.empty())
+            ans.push_back(a[i]);
+
         st.push(a[i]);
     }
-    
+
     reverse(ans.begin(),ans.end());
+
     return ans;
 }
 
