@@ -1,4 +1,6 @@
 /*
+Railway platform question same as this.
+
 There is one meeting room in a firm. There are N meetings in the form of (start[i], end[i]) 
 where start[i] is start time of meeting i and end[i] is finish time of meeting i.
 What is the maximum number of meetings that can be accommodated in the meeting room when 
