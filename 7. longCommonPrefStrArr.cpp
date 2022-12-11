@@ -33,3 +33,20 @@ string longestCommonPrefix (string arr[], int N){
     }
     return ans;
 }
+
+
+//another approach with same time and space
+string longestCommonPrefix(vector<string>& strs) {
+         string ans="";
+         int strOneSize=strs[0].size();
+
+         for(int i=0;i<strOneSize;i++){
+            for(int j=1;j<strs.size();j++){
+                if(strs[0][i]!=strs[j][i])
+                    return ans;
+            }
+            ans+=strs[0][i];
+         }
+
+         return ans;
+}
